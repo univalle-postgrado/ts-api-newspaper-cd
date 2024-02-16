@@ -1,17 +1,20 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import { User } from "./entity/User"
+import * as dotenv from "dotenv";
+// import { User } from "./entity/User.entity";
+import { Category } from "./entity/Category";
 
 export const AppDataSource = new DataSource({
     type: "postgres",
     host: "localhost",
     port: 5432,
-    username: "test",
-    password: "test",
-    database: "test",
+    username: "postgres",
+    password: "5653651Mh3",
+    database: "ts_bdapinewspaper",
     synchronize: true,
     logging: false,
-    entities: [User],
-    migrations: [],
+    entities: [],
+    migrationsTableName: "migrations",
+    migrations: [__dirname + "/migration/*.ts"],
     subscribers: [],
 })
