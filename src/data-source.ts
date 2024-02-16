@@ -1,7 +1,6 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
-import * as dotenv from "dotenv";
-// import { User } from "./entity/User.entity";
+// import { User } from "./entity/User";
 import { Category } from "./entity/Category";
 
 export const AppDataSource = new DataSource({
@@ -13,8 +12,7 @@ export const AppDataSource = new DataSource({
     database: "ts_bdapinewspaper",
     synchronize: true,
     logging: false,
-    entities: [],
-    migrationsTableName: "migrations",
+    entities: [Category],
     migrations: [__dirname + "/migration/*.ts"],
     subscribers: [],
 })
