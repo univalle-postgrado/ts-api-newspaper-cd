@@ -10,3 +10,7 @@ jobs:
     steps:
       - name: Mostrar mensaje
         run: echo "Hola mundo"
+      - name: Mostrar fecha y hora del sistema
+        run: date
+      - name: Checkout repository
+        uses: actions/checkout@v4
