@@ -41,6 +41,6 @@ jobs:
             git fetch --all &&
             git reset --hard origin/dev &&
             git pull origin dev &&
-            npm i &&
-            npm run build
+            /home/ubuntu/.nvm/versions/node/v20.17.0/bin/npm i &&
+            /home/ubuntu/.nvm/versions/node/v20.17.0/bin/npm run build
             '
