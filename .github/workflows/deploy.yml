@@ -44,5 +44,6 @@ jobs:
             export PATH=/home/ubuntu/.nvm/versions/node/v20.17.0/bin:$PATH &&
             npm i &&
             npm i express --save &&
-            npm run build
+            npm run build &&
+            pm2 restart ts-api-newspaper
             '
